@@ -66,29 +66,8 @@
         {if $env_mode == 'dev'}
             {include file=modal/modal_debug.tpl}
         {/if}
-        <!-- /MODAUX -->
-
-        <div id="wrapper">
-            
-            <div id="content">
-                <div class="inner">
-                    <div class="container">
-                        {include file=sections/$section.tpl}
-                    </div> <!-- /container -->
-                </div> <!-- /inner -->
-            </div> <!-- /content -->
-            <div id="clear-footer"></div>
-        </div> <!-- /wrapper -->
-
-        <footer>
-            <div id="extra">
-
-            </div> <!-- /extra -->
-            <div id="footer">
-
-            </div> <!-- /footer -->
-        </footer>
-
+        <!-- /MODAUX -->        
+        {include file=$section_template}
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>

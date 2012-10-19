@@ -29,14 +29,19 @@ class Controller
      */
     public function view()
     {
-        View::getInstance()->assign('js',      $this->getJs());
-        View::getInstance()->assign('ieJs',    $this->getIeJs());
-        View::getInstance()->assign('css',     $this->getCss());
-        View::getInstance()->assign('ieCss',   $this->getIeCss());
-        View::getInstance()->assign('less',    $this->getLess());
-        View::getInstance()->assign('ieLess',  $this->getIeLess());
-        View::getInstance()->assign('page',    $this->page);
-        View::getInstance()->assign('section', $this->section);
+        $page_template    = $this->section . "/pages/" . $this->page . ".tpl";
+        $section_template = $this->section . "/" . $this->section . ".tpl";
+
+        View::getInstance()->assign('js',               $this->getJs());
+        View::getInstance()->assign('ieJs',             $this->getIeJs());
+        View::getInstance()->assign('css',              $this->getCss());
+        View::getInstance()->assign('ieCss',            $this->getIeCss());
+        View::getInstance()->assign('less',             $this->getLess());
+        View::getInstance()->assign('ieLess',           $this->getIeLess());
+        View::getInstance()->assign('page',             $this->page);
+        View::getInstance()->assign('section',          $this->section);
+        View::getInstance()->assign('page_template',    $page_template);
+        View::getInstance()->assign('section_template', $section_template);
         
         View::getInstance()->display(TEMPLATES_DIR . 'index.tpl');
     }

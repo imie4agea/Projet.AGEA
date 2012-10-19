@@ -89,7 +89,7 @@ $controller->setIeCss(array(
   PROCEDURES
   ============================================================================== */
 
-include CONTROLLERS_DIR . $page . '.php'; 
+if (file_exists(CONTROLLERS_DIR . $page . '.php')) include_once CONTROLLERS_DIR . $page . '.php'; 
 
 /* ==============================================================================
   AFFICHAGE
