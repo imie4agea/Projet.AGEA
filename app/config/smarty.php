@@ -25,4 +25,4 @@ if (ENV_MODE == 'dev') View::getInstance()->assign(array('smarty_variables' => V
   VARIABLES DE TEST
   ============================================================================== */
 
-if (ENV_MODE == 'dev') View::getInstance()->assign(parse_ini_file(INI_DIR.'tmp.ini'));
+if (ENV_MODE == 'dev') View::getInstance()->assign(parse_ini_file(CONFIG_DIR.'ini/tmp.ini'));

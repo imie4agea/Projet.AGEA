@@ -38,7 +38,7 @@ $section   = 'public';
 $navigable = true;
 $map       = parse_ini_file(CONFIG_DIR . 'ini/pages.ini', true);
 
-foreach ($_map as $_section => $_pages){
+foreach ($map as $_section => $_pages){
     foreach ($_pages as $_page => $_navigable){
         if ($_page == $page){
             $section   = $_section;
