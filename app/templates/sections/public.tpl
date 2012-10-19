@@ -1,0 +1,1 @@
+{include file=sections/pages/$page.tpl}
