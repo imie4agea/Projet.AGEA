@@ -59,7 +59,7 @@
 
     <body>
         <!--[if lt IE 7]>
-            <p class="chromeframe">Votre navigateur est ancien. <a href="http://browsehappy.com/">Mettez le à jour</a> ou <a href="http://www.google.com/chromeframe/?redirect=true">installez Google Chrome Frame</a> pour pouvoir profiter de ce site.</p>
+            <p class="chromeframe">Votre navigateur est obsolète. <a href="http://browsehappy.com/">Mettez le à jour</a> ou <a href="http://www.google.com/chromeframe/?redirect=true">installez Google Chrome Frame</a> pour pouvoir profiter de ce site.</p>
         <![endif]-->
 
         <!-- MODAUX -->
