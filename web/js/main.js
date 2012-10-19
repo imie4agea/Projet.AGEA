@@ -16,7 +16,7 @@
 // Raccourci clavier pour le modal de debug
 
 shortcut.add("Control+Alt+D",function() {
-    $('#modal-debug').modal('show')
+    $('#modal-debug').modal('show');
 });
 
 // Activation des onglets pour le modal de debug
