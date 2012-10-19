@@ -1,5 +1,6 @@
 <div class="navbar">
     <div class="navbar-inner">
+        
         <a class="brand" href="#">{$site_name|upper}</a>
         <ul class="nav">
             {foreach from=$map.public key=p item=navigable}
