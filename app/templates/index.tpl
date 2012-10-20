@@ -59,7 +59,7 @@
         <![endif]-->
 
         {if $env_mode == 'dev'}
-            {include file=modal/modal_debug.tpl}
+            {include file=dev/modal/modal_debug.tpl}
         {/if}
 
         {include file=$section_template}

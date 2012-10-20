@@ -1,3 +1,5 @@
+{include file=public/modal/modal_login.tpl}
+
 <header>
 	<div class="widget-public agea">
 		<a href="{$site_url}"><span class="btn btn-large xlarge-btn">

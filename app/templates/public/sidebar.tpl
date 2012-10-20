@@ -6,11 +6,8 @@
 </div>
 
 <div class="widget-public">
-	<span class="btn btn-info btn-large xlarge-btn wide-button">
+	<a href="#login" role="button" data-toggle="modal" class="btn btn-info btn-large xlarge-btn wide-button">
 		<img src="../img/login.png" alt="Connexion" class="squared-image">
 		<h1>Connexion</h1>
-	</span>
+	</a>
 </div>
-
-
-	

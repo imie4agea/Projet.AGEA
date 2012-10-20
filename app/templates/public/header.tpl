@@ -14,7 +14,7 @@
 				            {foreach from=$map.public key=_page item=_title}
                 				{if $_page|strpos:'_'!==0}
 				                    <li {if $page==$_page} class="active" {/if}>
-				                    	<a href="?p={$_page}">{$_title}</a>
+				                    	<a href="index.php?p={$_page}">{$_title}</a>
 				                    </li>
 				                {/if}
 				            {/foreach}
