@@ -38,6 +38,20 @@ $(document).ready(function(){
     $('.krumo-first > .krumo-child > .krumo-nest').show();
 });
 
+// Alertes
+$(document).ready(function(){
+    $('.alert').hide();
+});
+
+$('#login_remember').on('click', function(e){
+    if ($('#login_remember').attr('checked') == 'checked'){
+      $('#login_remember_warning').show();
+    } else {
+      $('#login_remember_warning').hide();
+    }
+});
+
+
 /* ==============================================================================
   MODAUX
   ============================================================================== */

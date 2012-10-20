@@ -1,8 +1,8 @@
 <div class="container">
-	<div class="row">
-		<div class="span6">
+	<div class="row-fluid">
+		<div class="span8">
 		</div>
-		<div class="span6" style="text-align: right;">
+		<div class="span4" style="text-align: right;">
 			<p><h3><i class="icon-star"></i> Professionalisme</h3></p>
 			<p><h3><i class="icon-star"></i> Disponibilité</h3></p>
 			<p><h3><i class="icon-star"></i> Proximité</h3></p>
