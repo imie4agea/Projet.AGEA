@@ -17,7 +17,7 @@
 						<a href="#login" role="button" data-toggle="modal">administration</a>
 					</li>
 					<li>
-						<a href="mailto:contact@{$domain}">contact</a>
+						<a href="mailto:rg-paysloire@agea.fr">contact</a>
 					</li>
 				</ul>
 			</div>

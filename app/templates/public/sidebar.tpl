@@ -1,5 +1,5 @@
 <div class="widget-public">
-	<a href="?p=_soumettre_cv" title="Déposez votre CV !" class="btn btn-danger btn-large xlarge-btn wide-button">
+	<a href="#post_cv" role="button" data-toggle="modal" class="btn btn-danger btn-large xlarge-btn wide-button">
 		<img src="../img/cv.png" alt="Déposez votre CV !" class="squared-image">
 		<h1>Déposez votre CV !</h1>
 	</a>

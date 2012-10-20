@@ -208,7 +208,4 @@
             </div> <!-- /debug-smarty -->
         </div>
     </div> <!-- /modal-body -->
-    <div class="modal-footer"> 
-        <input class="btn" type="button" data-dismiss="modal" value="Close">
-    </div> <!-- /modal-footer -->
 </div> <!-- /modal -->

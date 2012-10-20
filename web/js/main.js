@@ -55,3 +55,13 @@ $('.modal').css({
         return -($(this).height() / 2);
     }
 })
+
+// Envoi des formulaires
+
+$('#login-submit').on('click', function(e){
+    $('#login-form').submit();
+});
+
+$('#cv-submit').on('click', function(e){
+    $('#cv-form').submit();
+});

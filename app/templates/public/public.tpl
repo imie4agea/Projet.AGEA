@@ -1,4 +1,5 @@
 {include file=public/modal/modal_login.tpl}
+{include file=public/modal/modal_cv.tpl}
 
 <header>
 	<div class="widget-public agea">

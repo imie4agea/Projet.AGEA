@@ -3,8 +3,8 @@
         <i class="icon-signin"></i> Connexion
         <button class="close" data-dismiss="modal">x</button>
     </div>
-    <form id="login-form" action="index.php?p={$page}" method="post" class="form-horizontal">
         <div class="modal-body">
+            <form id="login-form" action="index.php?p={$page}" method="post" class="form-horizontal">
                 <div class="control-group">
                     <label class="control-label" for="login_username">Nom d'utilisateur :</label>
                     <div class="controls">
@@ -27,9 +27,9 @@
                     <button class="close" data-dismiss="alert">×</button>
                     <strong>Attention:</strong> ne cochez pas cette case si vous vous connectez depuis un lieu public !
                 </div>
+            </form>
         </div>
-        <div class="modal-footer">
-            <input class="btn btn-primary" type="submit" value="Connexion">
-        </div>
-    </form>
+    <div class="modal-footer">
+        <input id="login-submit" class="btn btn-primary" type="submit" value="Connexion">
+    </div>
 </div>
