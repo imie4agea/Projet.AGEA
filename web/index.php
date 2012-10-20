@@ -19,12 +19,6 @@ include_once ROOT_DIR . 'app/config/config.php';
 include_once CONFIG_DIR . 'smarty.php';
 
 /* ==============================================================================
-  SESSION
-  ============================================================================== */
-
-session_start();
-
-/* ==============================================================================
   PAGE
   ============================================================================== */
 
@@ -34,19 +28,25 @@ if (isset($_GET['p'])){
     $page = 'accueil';
 }
 
-$section   = 'public';
-$navigable = true;
-$map       = parse_ini_file(CONFIG_DIR . 'ini/pages.ini', true);
+$section    = 'public';
+$map        = parse_ini_file(CONFIG_DIR . 'ini/pages.ini', true);
+$icons      = parse_ini_file(CONFIG_DIR . 'ini/icons.ini');
 
 foreach ($map as $_section => $_pages){
-    foreach ($_pages as $_page => $_navigable){
+    foreach ($_pages as $_page => $_title){
         if ($_page == $page){
-            $section   = $_section;
-            $navigable = $_navigable == 'true' ? true : false;
+            $section    = $_section;
+            $page_title = $_title;
             break;
         }
     }
 }
+
+View::getInstance()->assign('page_template', $section . "/pages/" . $page . ".tpl");
+View::getInstance()->assign('section_template', $section . "/" . $section . ".tpl");
+View::getInstance()->assign('page_title', $page_title);
+View::getInstance()->assign('icons', $icons);
+View::getInstance()->assign('map', $map);
 
 /* ==============================================================================
   CONTRÔLEURS
@@ -57,7 +57,7 @@ $controller->setPage($page);
 $controller->setSection($section);
 
 /* ==============================================================================
-  SCRIPTS
+  RESSOURCES
   ============================================================================== */
 
 // Scripts de developpement
@@ -70,20 +70,14 @@ if (ENV_MODE == 'dev'){
 // JS de la page
 if (file_exists(JS . $controller->getPage() . '.js')) $controller->setJs(array(JS . $controller->getPage() . '.js'));
 
+// CSS de la page
+if (file_exists(CSS . $controller->getPage() . '.css')) $controller->setCss(array(CSS . $controller->getPage() . '.css' => 'all'));
+
 /* ==============================================================================
-  STYLES
+  SESSION
   ============================================================================== */
 
-// CSS commun
-$controller->setCss(array(
-    CSS . 'opensans.css'     => 'all',
-    CSS . 'font-awesome.css' => 'all')
-);
-
-// CSS pour Internet Explorer
-$controller->setIeCss(array(
-    'gte IE 7' => CSS . 'lib/font-awesome-ie7.css')
-);
+session_start();
 
 /* ==============================================================================
   PROCEDURES
@@ -95,5 +89,4 @@ if (file_exists(CONTROLLERS_DIR . $page . '.php')) include_once CONTROLLERS_DIR 
   AFFICHAGE
   ============================================================================== */
 
-// Affichage de la vue
 $controller->view();

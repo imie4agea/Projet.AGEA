@@ -8,8 +8,6 @@ class Controller
     private $ieJs;
     private $css;
     private $ieCss;
-    private $less;
-    private $ieLess;
 
     /**
      * Constructeur
@@ -20,8 +18,6 @@ class Controller
         $this->ieJs   = array();
         $this->css    = array();
         $this->ieCss  = array();
-        $this->less   = array();
-        $this->ieLess = array();
     }
     
     /**
@@ -29,19 +25,12 @@ class Controller
      */
     public function view()
     {
-        $page_template    = $this->section . "/pages/" . $this->page . ".tpl";
-        $section_template = $this->section . "/" . $this->section . ".tpl";
-
         View::getInstance()->assign('js',               $this->getJs());
         View::getInstance()->assign('ieJs',             $this->getIeJs());
         View::getInstance()->assign('css',              $this->getCss());
         View::getInstance()->assign('ieCss',            $this->getIeCss());
-        View::getInstance()->assign('less',             $this->getLess());
-        View::getInstance()->assign('ieLess',           $this->getIeLess());
         View::getInstance()->assign('page',             $this->page);
         View::getInstance()->assign('section',          $this->section);
-        View::getInstance()->assign('page_template',    $page_template);
-        View::getInstance()->assign('section_template', $section_template);
         
         View::getInstance()->display(TEMPLATES_DIR . 'index.tpl');
     }
@@ -104,26 +93,6 @@ class Controller
     public function getIeCss()
     {
         return $this->ieCss;
-    }
-    
-    /**
-     * Get less
-     *
-     * @return array
-     */
-    public function getLess()
-    {
-        return $this->less;
-    }
-    
-    /**
-     * Get ieLess
-     *
-     * @return array
-     */
-    public function getIeLess()
-    {
-        return $this->ieLess;
     }
     
     /**
@@ -207,36 +176,6 @@ class Controller
     {
         foreach($css as $version => $file){
             $this->ieCss[$version] = $file;
-        }
-
-        return $this;
-    }
-    
-    /**
-     * Set less
-     * 
-     * @param array $less
-     * @return Controller
-     */
-    public function setLess($less)
-    {
-        foreach($less as $file => $media){
-            $this->less[$file] = $media;
-        }
-
-        return $this;
-    }
-    
-    /**
-     * Set ieLess
-     * 
-     * @param array $less
-     * @return Controller
-     */
-    public function setIeLess($less)
-    {
-        foreach($less as $version => $file){
-            $this->ieLess[$version] = $file;
         }
 
         return $this;

@@ -1,0 +1,143 @@
+/*
+    // ========================================== \\
+   ||                                              ||
+   ||                  GRADIENTS                   ||
+   ||                                              ||
+    \\ ========================================== //
+*/
+/*
+ * Fonction de dégradé linéaire.
+ * @param color : Couleur principale du dégradé (couleur centrale)
+ * @param strength : force du dégradé (en pourcentage)
+ */
+/*
+ * Fonction de dégradé linéaire alternative.
+ * @param from : couleur du haut du dégradé
+ * @param to : couleur du bas de dégradé
+ */
+/*
+ * Fonction de dégradé radial.
+ * @param from : couleur centrale du dégradé
+ * @param to : couleur externe du dégradé
+ * @param size : taille du dégradé
+ * @param top : centre du dégradé (top)
+ * @param left : centre du dégradé (left)
+ */
+/*
+    // ========================================== \\
+   ||                                              ||
+   ||                   SHADOWS                    ||
+   ||                                              ||
+    \\ ========================================== //
+*/
+/*
+ * Fonction d'ombre portée simple.
+ * @param left : position left
+ * @param top : position top
+ * @param size : taille du dégradé
+ * @param color : couleur du dégradé
+ * @param magnification : grossissement du dégradé
+ */
+/*
+ * Fonction d'ombre portée sur le bas ed la div (comme un bas de feuille relevée)
+ * @param color : Couleur du dégradé (noir à 80% d'opacité par défaut)
+ */
+/*
+    // ========================================== \\
+   ||                                              ||
+   ||                   BUTTONS                    ||
+   ||                                              ||
+    \\ ========================================== //
+*/
+/*
+ * Fonction créant un effet glossy pour les boutons de l'interface
+ * @param color : Couleur de base du bouton
+ * @param radius : radius des coins arrondis
+ */
+/*
+    // ========================================== \\
+   ||                                              ||
+   ||                    BOXES                     ||
+   ||                                              ||
+    \\ ========================================== //
+*/
+/*
+    // ========================================== \\
+   ||                                              ||
+   ||                BORDER-RADIUS                 ||
+   ||                                              ||
+    \\ ========================================== //
+*/
+/* ==============================================================================
+  MODAL
+  ============================================================================== */
+.modal-header {
+  background-color: #DDDDDD;
+  -webkit-border-radius: 6px 6px 0 0;
+  -moz-border-radius: 6px 6px 0 0;
+  -o-border-radius: 6px 6px 0 0;
+  border-radius: 6px 6px 0 0;
+}
+.modal-header .close {
+  margin-top: 0px;
+  padding-bottom: 2px;
+  border: none;
+}
+.modal-footer {
+  background-color: #DDDDDD;
+  padding: 7px 15px;
+}
+#modal-debug .modal-body {
+  height: 400px;
+}
+#modal-debug table {
+  width: auto;
+}
+#modal-debug table thead {
+  min-width: 0;
+  width: auto;
+}
+#modal-debug table thead th {
+  min-width: 0;
+  width: auto;
+}
+#modal-debug table tbody {
+  min-width: 0;
+  width: auto;
+}
+#modal-debug table tbody td {
+  min-width: 0;
+  width: auto;
+}
+/* ==============================================================================
+  GENERIC
+  ============================================================================== */
+.widget-public {
+  margin-bottom: 25px;
+}
+.widget-public .btn.wide-button {
+  width: 100% !important;
+  margin: 4px;
+}
+.widget-public .btn:hover {
+  -webkit-box-shadow: 0px 0px 10px 0px #000000;
+  -moz-box-shadow: 0px 0px 10px 0px #000000;
+  -o-box-shadow: 0px 0px 10px 0px #000000;
+  box-shadow: 0px 0px 10px 0px #000000;
+}
+.widget-public h1 {
+  color: white !important;
+  font-size: 30px;
+}
+.widget-public img.squared-image {
+  height: 100px;
+  width: 100px;
+}
+.agea {
+  float: left;
+  margin: 15px;
+}
+#page-title-inner h2 {
+  color: #f31333;
+  margin-left: 20px;
+}

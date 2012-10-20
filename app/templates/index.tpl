@@ -7,14 +7,22 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="apple-mobile-web-app-capable" content="yes">
 
-        <title>{ $title|upper }</title>
+        <title>{ $title }</title>
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/bootstrap-responsive.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
+        <link rel="stylesheet" href="css/magnus.css">
         <link rel="stylesheet" href="css/main.css">
+        <!--[if IE 7]><link rel="stylesheet" href="css/font-awesome-ie7.css"><![endif]-->
+
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700">
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Serif">
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Boogaloo">
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Economica:700,400italic">
 
         <script src="js/modernizr.min.js"></script>
 
@@ -24,6 +32,7 @@
                 <link rel="stylesheet" href="{$file}" media="{$media}" />
             {/foreach}
         {/if}
+
         {if isset($ie_css) && $ie_css}
             {foreach from=$ie_css key=version item=file}
                 <!--[if {$version}]>
@@ -32,20 +41,7 @@
             {/foreach}
         <!-- /CSS -->
         {/if}
-        {if isset($less) && $less}
-        <!-- LESS -->
-            {foreach from=$less key=file item=media}
-                <link rel="stylesheet/less" href="{$file}" media="{$media}" />
-            {/foreach}
-        {/if}
-        {if isset($ie_less) && $ie_less}
-            {foreach from=$ie_less key=version item=file}
-                <!--[if {$version}]>
-                    <link rel="stylesheet" href="{$file}" />
-                <![endif]-->
-            {/foreach}
-        <!-- /LESS -->
-        {/if}
+
         {if isset($ie_js) && $ie_js}
         <!-- JS -->
             {foreach from=$ie_js key=version item=file}
@@ -62,11 +58,10 @@
             <p class="chromeframe">Votre navigateur est obsolète. <a href="http://browsehappy.com/">Mettez le à jour</a> ou <a href="http://www.google.com/chromeframe/?redirect=true">installez Google Chrome Frame</a> pour pouvoir profiter de ce site.</p>
         <![endif]-->
 
-        <!-- MODAUX -->
         {if $env_mode == 'dev'}
             {include file=modal/modal_debug.tpl}
         {/if}
-        <!-- /MODAUX -->        
+
         {include file=$section_template}
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>

@@ -1,0 +1,91 @@
+@import "config.less";
+
+/* ==============================================================================
+  MODAL
+  ============================================================================== */
+
+.modal-header {
+    background-color: #DDDDDD;
+    
+    .border-radius(6px 6px 0 0);
+
+    .close {
+        margin-top: 0px;
+        padding-bottom: 2px;
+        border: none;
+    }
+}
+
+.modal-footer {
+    background-color: #DDDDDD;
+    padding: 7px 15px;
+}
+
+#modal-debug {
+    .modal-body {
+        height: 400px;
+    }
+
+    table {
+        width: auto;
+
+        thead {
+            min-width: 0;
+            width: auto;
+
+            th {
+                min-width: 0;
+                width: auto;
+            }
+        }
+
+        tbody {
+            min-width: 0;
+            width: auto;
+
+            td {
+                min-width: 0;
+                width: auto;
+            }
+        }
+    }
+}
+
+/* ==============================================================================
+  GENERIC
+  ============================================================================== */
+
+.widget-public {
+	.btn.wide-button {
+		width: 100% !important;
+		margin: 4px;
+	}
+
+	.btn:hover {
+		.box-shadow();
+	}
+	
+	h1{
+		color: white !important;
+		font-size: 30px;
+	}
+
+	img.squared-image{
+		height: 100px;
+		width: 100px;
+	}
+
+	margin-bottom: 25px;
+}
+
+.agea {
+	float: left;
+	margin: 15px;
+}
+
+#page-title-inner {
+	h2{
+		color: @main-color;
+		margin-left: 20px;
+	}
+}

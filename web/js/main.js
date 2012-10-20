@@ -4,14 +4,16 @@
 
 // Active les tooltips bootstrap
 
- $(".tooltip-top").tooltip({placement: "top"});
- $(".tooltip-bottom").tooltip({placement: "bottom"});
- $(".tooltip-left").tooltip({placement: "left"});
- $(".tooltip-right").tooltip({placement: "right"});
+$(".tooltip-top").tooltip({placement: "top"});
+$(".tooltip-bottom").tooltip({placement: "bottom"});
+$(".tooltip-left").tooltip({placement: "left"});
+$(".tooltip-right").tooltip({placement: "right"});
 
-/* ==============================================================================
-  LIBRAIRIES
-  ============================================================================== */
+// Active les carousels
+// 
+$('.carousel').carousel({
+  interval: 3000
+})
 
 // Raccourci clavier pour le modal de debug
 
