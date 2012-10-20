@@ -111,6 +111,10 @@
   min-width: 0;
   width: auto;
 }
+#post_cv h2 {
+  color: #f31333;
+  padding-top: 5px;
+}
 .large_modal {
   width: 1000px;
   margin-left: -500px;
