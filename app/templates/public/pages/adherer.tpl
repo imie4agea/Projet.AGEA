@@ -16,7 +16,6 @@
             <li>Recevoir une information régulière et en temps réel par le biais de la lettre AGEA, la lettre électronique hebdomadaire et le site internet agea.fr.</li>
             <li>Recevoir un accueil spécifique lorsque l’on est nouvel agent.</li>
             <li>Bénéficier d’avantages adhérents avec des conditions préférentielles auprès de différents prestataires (téléphonie, logiciels, fournitures…).</li>
-            <li></li>
         </ul>
         <h1>C’est aussi participer à des temps forts en région :</h1>
         <ul>
