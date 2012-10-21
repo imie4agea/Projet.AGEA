@@ -1,0 +1,15 @@
+<?php
+
+set_time_limit(0);
+
+defined('ROOT_DIR')
+    || define('ROOT_DIR', dirname(__FILE__) . '/../../');
+
+echo 'Suppression des tables...' . PHP_EOL;
+exec('php ' . ROOT_DIR . 'doctrine.php orm:schema-tool:drop --force');
+echo 'Suppression terminée !' . PHP_EOL;
+
+echo 'Création des tables...' . PHP_EOL;
+exec('php ' . ROOT_DIR . 'doctrine.php orm:schema-tool:create');
+
+echo 'Mise à jour terminée !' . PHP_EOL;
