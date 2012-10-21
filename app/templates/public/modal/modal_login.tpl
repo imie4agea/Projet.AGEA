@@ -25,7 +25,7 @@
             </div>
             <div class="alert" id="login_remember_warning" class="hide">
                 <button class="close" data-dismiss="alert">×</button>
-                <strong>Attention:</strong> ne cochez pas cette case si vous vous connectez depuis un lieu public !
+                <strong>Attention :</strong> ne cochez pas cette case si vous vous connectez depuis un lieu public !
             </div>
         </form>
     </div>
