@@ -1,5 +1,4 @@
 {include file=public/modal/modal_login.tpl}
-{include file=public/modal/modal_cv.tpl}
 
 <div class="widget-public agea">
 	<a href="{$site_url}">
