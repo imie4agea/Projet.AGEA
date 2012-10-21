@@ -3,7 +3,6 @@
 class Controller
 {
     private $page;
-    private $section;
     private $js;
     private $ieJs;
     private $css;
@@ -14,10 +13,10 @@ class Controller
      */
     public function __construct()
     {
-        $this->js     = array();
-        $this->ieJs   = array();
-        $this->css    = array();
-        $this->ieCss  = array();
+        $this->js    = array();
+        $this->ieJs  = array();
+        $this->css   = array();
+        $this->ieCss = array();
     }
     
     /**
@@ -25,12 +24,12 @@ class Controller
      */
     public function view()
     {
-        View::getInstance()->assign('js',               $this->getJs());
-        View::getInstance()->assign('ieJs',             $this->getIeJs());
-        View::getInstance()->assign('css',              $this->getCss());
-        View::getInstance()->assign('ieCss',            $this->getIeCss());
-        View::getInstance()->assign('page',             $this->page);
-        View::getInstance()->assign('section',          $this->section);
+        View::getInstance()->assign('js',      $this->getJs());
+        View::getInstance()->assign('ieJs',    $this->getIeJs());
+        View::getInstance()->assign('css',     $this->getCss());
+        View::getInstance()->assign('ieCss',   $this->getIeCss());
+        View::getInstance()->assign('page',    $this->page->getName());
+        View::getInstance()->assign('section', $this->page->getSection()->getName());
         
         View::getInstance()->display(TEMPLATES_DIR . 'index.tpl');
     }
@@ -43,16 +42,6 @@ class Controller
     public function getPage()
     {
         return $this->page;
-    }
-    
-    /**
-     * Get section
-     *
-     * @return string
-     */
-    public function getSection()
-    {
-        return $this->section;
     }
     
     /**
@@ -104,19 +93,6 @@ class Controller
     public function setPage($page)
     {
         $this->page = $page;
-
-        return $this;
-    }
-    
-    /**
-     * Set section
-     * 
-     * @param  string $section
-     * @return Controller
-     */
-    public function setSection($section)
-    {
-        $this->section = $section;
 
         return $this;
     }

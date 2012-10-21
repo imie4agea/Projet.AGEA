@@ -8,6 +8,14 @@ use Doctrine\Common\Collections\ArrayCollection;
 class ContentType
 {
     /**
+     * Constructeur
+     */
+    public function __construct()
+    {
+		$this->contents = new ArrayCollection();
+    }
+
+    /**
      * @var int
      * 
      * @Id
@@ -64,4 +72,100 @@ class ContentType
      * @ManyToOne(targetEntity="Render", inversedBy="content_types")
      */
     protected $render;
+    
+    public function getId() 
+    {
+        return $this->id;
+    }
+
+    public function setId($id) 
+    {
+        $this->id = $id;
+    
+        return $this;
+    }
+
+    public function getContents() 
+    {
+        return $this->contents;
+    }
+
+    public function setContents($contents) 
+    {
+        $this->contents = $contents;
+    
+        return $this;
+    }
+
+    public function getLabel() 
+    {
+        return $this->label;
+    }
+
+    public function setLabel($label) 
+    {
+        $this->label = $label;
+    
+        return $this;
+    }
+
+    public function getPicture() 
+    {
+        return $this->picture;
+    }
+
+    public function setPicture($picture) 
+    {
+        $this->picture = $picture;
+    
+        return $this;
+    }
+
+    public function getHtml() 
+    {
+        return $this->html;
+    }
+
+    public function setHtml($html) 
+    {
+        $this->html = $html;
+    
+        return $this;
+    }
+
+    public function getFeed() 
+    {
+        return $this->feed;
+    }
+
+    public function setFeed($feed) 
+    {
+        $this->feed = $feed;
+    
+        return $this;
+    }
+
+    public function getPage() 
+    {
+        return $this->page;
+    }
+
+    public function setPage($page) 
+    {
+        $this->page = $page;
+    
+        return $this;
+    }
+
+    public function getRender() 
+    {
+        return $this->render;
+    }
+
+    public function setRender($render) 
+    {
+        $this->render = $render;
+    
+        return $this;
+    }
 }

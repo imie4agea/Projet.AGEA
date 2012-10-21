@@ -29,14 +29,6 @@ define('JS',   './js/');
 define('IMG',  './css/');
 
 /* ==============================================================================
-  PARAMÉTRAGE
-  ============================================================================== */
-
-foreach (parse_ini_file(CONFIG_DIR . 'ini/settings.ini') as $key => $value){
-  define(strtoupper($key), $value);
-}
-
-/* ==============================================================================
   AUTOLOAD
   ============================================================================== */
 
@@ -51,13 +43,6 @@ AutoloadManager::addFolder(APP_DIR);
 AutoloadManager::addFolder(LIB_DIR);
 
 /* ==============================================================================
-  LOCALISATION
-  ============================================================================== */
-
-date_default_timezone_set(TIMEZONE);
-setlocale(LC_ALL, LOCALE);
-
-/* ==============================================================================
   ENVIRONNEMENT
   ============================================================================== */
 
@@ -66,7 +51,6 @@ if (!(defined('ENV_MODE')) || (ENV_MODE != 'dev' && ENV_MODE != 'test' && ENV_MO
       $servername = $_SERVER['SERVER_NAME'];
 
       if        ($servername     == 'localhost') define('ENV_MODE', 'dev');
-      if (substr($servername, 0) == SITE_NAME)   define('ENV_MODE', 'dev');
       if (substr($servername, 0) == 'staging.')  define('ENV_MODE', 'preprod');
       if (substr($servername, 0) == 'beta.')     define('ENV_MODE', 'preprod');
       if (substr($servername, 0) == 'mobile.')   define('ENV_MODE', 'prod');
