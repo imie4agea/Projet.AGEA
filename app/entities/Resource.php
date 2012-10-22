@@ -5,7 +5,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 /**
  * @Entity
  */
-class Resource
+class Resource extends ArrayEntity
 {
     /**
      * Constructeur

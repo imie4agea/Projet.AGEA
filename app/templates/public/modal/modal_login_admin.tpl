@@ -1,10 +1,10 @@
-<div class="modal hide fade" id="login">
+<div class="modal hide fade" id="login-admin">
     <div class="modal-header">
-        <i class="icon-signin"></i> Connexion à l'espace membre
+        <i class="icon-signin"></i> Connexion à l'espace d'administration
         <button class="close" data-dismiss="modal">x</button>
     </div>
     <div class="modal-body">
-        <form id="login-form" action="index.php?p=recruter" method="post" class="form-horizontal">
+        <form id="login-admin-form" action="index.php?p=general" method="post" class="form-horizontal">
             <div class="control-group">
                 <label class="control-label" for="login_username">Nom d'utilisateur :</label>
                 <div class="controls">
@@ -30,6 +30,6 @@
         </form>
     </div>
     <div class="modal-footer">
-        <input id="login-submit" class="btn btn-primary" type="submit" value="Connexion">
+        <input id="login-admin-submit" class="btn btn-primary" type="submit" value="Connexion">
     </div>
 </div>

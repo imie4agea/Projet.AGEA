@@ -71,11 +71,18 @@
 /* ==============================================================================
   GENERIC
   ============================================================================== */
+* {
+  margin: 0;
+}
+html {
+  height: 100%;
+}
 body {
   font-family: 'Droid Sans';
   background: url(../img/bg2.jpg);
   font-size: 12px;
   color: #666;
+  height: 100%;
 }
 h1,
 h2,
@@ -128,6 +135,18 @@ p {
 /* ==============================================================================
   WRAPPER
   ============================================================================== */
+.wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -290px;
+}
+.push {
+  height: 290px;
+}
+footer, .push {
+  clear: both;
+}
 #wrapper {
   padding-top: 50px;
   padding-bottom: 50px;

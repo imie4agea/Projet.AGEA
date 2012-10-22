@@ -84,6 +84,12 @@ class SectionProxy extends \Section implements \Doctrine\ORM\Proxy\Proxy
         return parent::setPages($pages);
     }
 
+    public function toArray($crude = true)
+    {
+        $this->__load();
+        return parent::toArray($crude);
+    }
+
 
     public function __sleep()
     {

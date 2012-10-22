@@ -3,7 +3,7 @@
 /**
  * @Entity
  */
-class Skill
+class Skill extends ArrayEntity
 {
     /**
      * @var int

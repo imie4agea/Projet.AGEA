@@ -3,7 +3,7 @@
 /**
  * @Entity
  */
-class Content
+class Content extends ArrayEntity
 {
     /**
      * @var int

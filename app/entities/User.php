@@ -3,7 +3,7 @@
 /**
  * @Entity
  */
-class User
+class User extends ArrayEntity
 {
     /**
      * @var int

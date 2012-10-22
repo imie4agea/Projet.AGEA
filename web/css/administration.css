@@ -56,11 +56,12 @@ a:hover {
 }
 
 strong {
-	font-size: 18px;
+	font-size: 14px;
 }
 
 body {
 	background: #E9E9E9 url(../img/body-bg.png) repeat 0 0;
+  	font-family: 'Droid Sans' !important;
 	font: 13px/1.7em 'Open Sans';
 	height: 100%;
 }
@@ -257,7 +258,7 @@ textarea {
 
 .subnavbar .container > ul > li.active > a {
 	background: #333;
-	color: #f31333;
+	color: white;
 }
     
 

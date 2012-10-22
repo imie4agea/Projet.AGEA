@@ -76,6 +76,10 @@ $('#login-submit').on('click', function(e){
     $('#login-form').submit();
 });
 
+$('#login-admin-submit').on('click', function(e){
+    $('#login-admin-form').submit();
+});
+
 $('#cv-submit').on('click', function(e){
     $('#cv-form').submit();
 });

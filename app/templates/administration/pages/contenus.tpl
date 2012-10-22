@@ -1,10 +1,10 @@
 <div class="row-fluid">
 	<div class="span6">
-		{if $display_content == true}
+		{if $add_content == true}
 			<div class="widget">
-				{include file=administration/pages/contenus/create_widget.tpl}
+				{include file=administration/pages/contenus/add_widget.tpl}
 			</div>
-		{elseif $display_new == true}
+		{elseif $edit_content == true}
 			<div class="widget">
 				{include file=administration/pages/contenus/edit_widget.tpl}
 			</div>

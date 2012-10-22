@@ -132,6 +132,12 @@ class ContentTypeProxy extends \ContentType implements \Doctrine\ORM\Proxy\Proxy
         return parent::setRender($render);
     }
 
+    public function toArray($crude = true)
+    {
+        $this->__load();
+        return parent::toArray($crude);
+    }
+
 
     public function __sleep()
     {

@@ -1,6 +1,6 @@
 <div class="widget-header">
 	<i class="icon-pencil"></i>
-	<h3>Nouveau contenu ({$content_type_label}) :</h3>
+	<h3>Nouveau contenu ({$content_type.label}) :</h3>
 </div>
 
 <div class="widget-content">
@@ -18,12 +18,12 @@
             </div>
         </div>
 
-        {if $content_type_picture == true}
+        {if $content_type.picture == true}
             <div class="control-group">
                 <label class="control-label" for="content_resource_id">Image :</label>
                 <div class="controls">
                     <select name="content_resource_id" id="content_resource_id">
-                        {foreach from=$list_resources key=id item=resource}
+                        {foreach from=$resources key=id item=resource}
                             <option value="{$id}" >{$resource.title|capitalize}</option>
                         {/foreach}
                     </select>

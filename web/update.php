@@ -16,15 +16,15 @@ include_once ROOT_DIR . 'app/config/config.php';
   MISE À JOUR
   ============================================================================== */
 
-echo 'Suppression des tables... </br>';
+echo utf8_decode('Suppression des tables... </br>');
 exec('php ' . ROOT_DIR . 'doctrine.php orm:schema-tool:drop --force');
-echo 'Suppression terminée ! </br>';
+echo utf8_decode('Suppression terminée ! </br>');
 
-echo 'Création des tables... </br>';
+echo utf8_decode('Création des tables... </br>');
 exec('php ' . ROOT_DIR . 'doctrine.php orm:schema-tool:create');
-echo 'Création terminée ! </br>';
+echo utf8_decode('Création terminée ! </br>');
 
-echo 'Chargement des sections... </br>';
+echo utf8_decode('Chargement des sections... </br>');
 
 $public = new Section();
 $public->setName('public');
@@ -43,7 +43,7 @@ $em->persist($administration);
 
 $em->flush();
 
-echo 'Chargement des pages... </br>';
+echo utf8_decode('Chargement des pages... </br>');
 
 $accueil = new Page();
 $accueil->setSection($public);
@@ -89,7 +89,7 @@ $em->persist($adherer);
 
 $mentions_legales = new Page();
 $mentions_legales->setSection($public);
-$mentions_legales->setName('mentions_legales');
+$mentions_legales->setName('_mentions_legales');
 $mentions_legales->setTitle('Mentions légales');
 $mentions_legales->setIcon('icon-legal');
 $em->persist($mentions_legales);
@@ -115,19 +115,19 @@ $evenements->setTitle('Évenements');
 $evenements->setIcon('icon-calendar');
 $em->persist($evenements);
 
-$actualites = new Page();
-$actualites->setSection($membre);
-$actualites->setName('actualites');
-$actualites->setTitle('Actualités');
-$actualites->setIcon('icon-pushpin');
-$em->persist($actualites);
+$bruissements = new Page();
+$bruissements->setSection($membre);
+$bruissements->setName('bruissements');
+$bruissements->setTitle('Bruissements de chambre');
+$bruissements->setIcon('icon-pushpin');
+$em->persist($bruissements);
 
-$contenus = new Page();
-$contenus->setSection($administration);
-$contenus->setName('informations_generales');
-$contenus->setTitle('Informations générales');
-$contenus->setIcon('icon-pencil');
-$em->persist($contenus);
+$general = new Page();
+$general->setSection($administration);
+$general->setName('general');
+$general->setTitle('Général');
+$general->setIcon('icon-pencil');
+$em->persist($general);
 
 $contenus = new Page();
 $contenus->setSection($administration);
@@ -136,23 +136,30 @@ $contenus->setTitle('Contenus');
 $contenus->setIcon('icon-pushpin');
 $em->persist($contenus);
 
-$contenus = new Page();
-$contenus->setSection($administration);
-$contenus->setName('types_contenus');
-$contenus->setTitle('Types de contenus');
-$contenus->setIcon('icon-wrench');
-$em->persist($contenus);
+$types_contenus = new Page();
+$types_contenus->setSection($administration);
+$types_contenus->setName('types_contenus');
+$types_contenus->setTitle('Types de contenus');
+$types_contenus->setIcon('icon-wrench');
+$em->persist($types_contenus);
 
-$contenus = new Page();
-$contenus->setSection($administration);
-$contenus->setName('pages');
-$contenus->setTitle('Pages');
-$contenus->setIcon('icon-sitemap');
-$em->persist($contenus);
+$pages = new Page();
+$pages->setSection($administration);
+$pages->setName('pages');
+$pages->setTitle('Pages');
+$pages->setIcon('icon-sitemap');
+$em->persist($pages);
+
+$ressources = new Page();
+$ressources->setSection($administration);
+$ressources->setName('ressources');
+$ressources->setTitle('Ressources');
+$ressources->setIcon('icon-picture');
+$em->persist($ressources);
 
 $em->flush();
 
-echo 'Chargement des métadonnées... </br>';
+echo utf8_decode('Chargement des métadonnées... </br>');
 
 $title = new Metadata();
 $title->setName('title');
@@ -203,9 +210,23 @@ $email->setValue('rg-paysloire@agea.fr');
 $email->setMetadata(false);
 $em->persist($email);
 
+$address = new Metadata();
+$address->setName('address');
+$address->setLabel('Adresse');
+$address->setValue('4 rue de l\'Héronnière - 44000 Nantes');
+$address->setMetadata(false);
+$em->persist($address);
+
+$phone = new Metadata();
+$phone->setName('phone');
+$phone->setLabel('Numéro de téléphone');
+$phone->setValue('02 40 69 51 10');
+$phone->setMetadata(false);
+$em->persist($phone);
+
 $em->flush();
 
-echo 'Chargement des types de contenus... </br>';
+echo utf8_decode('Chargement des types de contenus... </br>');
 
 $actualite = new ContentType();
 $actualite->setLabel('Actualité');
@@ -225,7 +246,7 @@ $em->persist($action);
 
 $em->flush();
 
-echo 'Chargement des resources... </br>';
+echo utf8_decode('Chargement des resources... </br>');
 
 $image1 = new Resource();
 $image1->setTitle('Image 1');
@@ -245,7 +266,7 @@ $em->persist($image2);
 
 $em->flush();
 
-echo 'Chargement des contenus... </br>';
+echo utf8_decode('Chargement des contenus... </br>');
 
 $actu1 = new Content();
 $actu1->setTitle('Actu 1');
@@ -280,4 +301,4 @@ $em->persist($action1);
 
 $em->flush();
 
-echo 'Chargement terminé ! </br>';
+echo utf8_decode('Chargement terminé ! </br>');

@@ -1,12 +1,7 @@
 {include file=public/modal/modal_login.tpl}
+{include file=public/modal/modal_login_admin.tpl}
 
-<div class="widget-public agea">
-	<a href="{$site_url}">
-		<span class="btn btn-large xlarge-btn">
-			<img src="./img/logo-medium.png" alt="AGEA">
-		</span>
-	</a>
-</div>
+{include file=public/logo_agea.tpl}
 
 <header>
     {include file=public/header.tpl}

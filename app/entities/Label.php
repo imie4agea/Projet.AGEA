@@ -5,7 +5,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 /**
  * @Entity
  */
-class Label
+class Label extends ArrayEntity
 {
     /**
      * Constructeur

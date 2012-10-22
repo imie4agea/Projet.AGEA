@@ -8,9 +8,11 @@
             <li><a href="#debug-globals" data-toggle="tab">Globals</a></li>
             <li><a href="#debug-krumo" data-toggle="tab">Krumo</a></li>
             <li><a href="#debug-smarty" data-toggle="tab">Smarty</a></li>
-        </ul> <!-- /debug-tabs -->
+        </ul>
+
         <div class="tab-content">
             <div id="debug-globals" class="tab-pane fade">
+                
                 <div class="subnav subnav-fixed">
                     <ul class="nav nav-pills">
                         <li>
@@ -32,13 +34,15 @@
                             <a style="color: red;" href="#globals-server">Server</a>
                         </li>
                     </ul>
-                </div> <!-- /subnav -->
+                </div>
+                
                 <table class="table table-striped table-bordered" id="globals-session">
                     <thead>
                         <tr>
                             <th style="color: orange;" colspan="3">SESSION</th>
                         </tr>
                     </thead>
+                    
                     <tbody>
                         {if $smarty.session|@sizeof > 0}
                             <tr>
@@ -60,12 +64,14 @@
                         {/if}
                     </tbody>
                 </table> <!-- /globals-session -->
+                
                 <table class="table table-striped table-bordered" id="globals-post">
                     <thead>
                         <tr>
                             <th style="color: green;" colspan="3">POST</th>
                         </tr>
                     </thead>
+                    
                     <tbody>
                         {if $smarty.post|@sizeof > 0}
                             <tr>
@@ -87,12 +93,14 @@
                         {/if}
                     </tbody>
                 </table> <!-- /globals-post -->
+                
                 <table class="table table-striped table-bordered" id="globals-get">
                     <thead>
                         <tr>
                             <th style="color: blue;" colspan="3">GET</th>
                         </tr>
                     </thead>
+                    
                     <tbody>
                         {if $smarty.get|@sizeof > 0}
                             <tr>
@@ -113,13 +121,15 @@
                             </tr>
                         {/if}
                     </tbody>
-                </table> <!-- /globals-get -->
+                </table>
+                
                 <table class="table table-striped table-bordered" id="globals-cookies">
                     <thead>
                         <tr>
                             <th style="color: purple;" colspan="3">COOKIES</th>
                         </tr>
                     </thead>
+                    
                     <tbody>
                         {if $smarty.cookies|@sizeof > 0}
                             <tr>
@@ -140,13 +150,15 @@
                             </tr>
                         {/if}
                     </tbody>
-                </table> <!-- /globals-cookies -->
+                </table>
+                
                 <table class="table table-striped table-bordered" id="globals-env">
                     <thead>
                         <tr>
                             <th style="color: brown;" colspan="3">ENV</th>
                         </tr>
                     </thead>
+                    
                     <tbody>
                         {if $smarty.env|@sizeof > 0}
                             <tr>
@@ -167,13 +179,15 @@
                             </tr>
                         {/if}
                     </tbody>
-                </table> <!-- /globals-env -->
+                </table>
+                
                 <table class="table table-striped table-bordered" id="globals-server">
                     <thead>
                         <tr>
                             <th style="color: red;" colspan="3">SERVER</th>
                         </tr>
                     </thead>
+                    
                     <tbody>
                         {if $smarty.server|@sizeof > 0}
                             <tr>
@@ -193,19 +207,21 @@
                             </tr>
                         {/if}
                     </tbody>
-                </table> <!-- /globals-server -->
-            </div> <!-- /debug-globals -->
+                </table>
+            </div>
+            
             <div id="debug-krumo" class="tab-pane fade">
                 {php}
                     global $debugArray;
                     krumo($debugArray);
                 {/php}
-            </div> <!-- /debug-krumo -->
+            </div>
+            
             <div id="debug-smarty" class="tab-pane fade">
                 {php}
                     krumo(View::getInstance()->getVariables());
                 {/php}
-            </div> <!-- /debug-smarty -->
+            </div>
         </div>
-    </div> <!-- /modal-body -->
-</div> <!-- /modal -->
+    </div>
+</div>

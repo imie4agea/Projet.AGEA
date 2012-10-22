@@ -3,7 +3,7 @@
 /**
  * @Entity
  */
-class Resume
+class Resume extends ArrayEntity
 {
     /**
      * @var int
