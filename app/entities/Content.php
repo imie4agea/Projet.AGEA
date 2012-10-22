@@ -29,9 +29,9 @@ class Content
     protected $body;
 
     /**
-     * @var string
+     * @var String
      * 
-     * @Column(type="datetime", nullable=false)
+     * @Column(type="string",length=100, nullable=false)
      */
     protected $datetime;
 

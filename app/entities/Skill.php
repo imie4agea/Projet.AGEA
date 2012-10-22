@@ -15,9 +15,9 @@ class Skill
     protected $id;
 
     /**
-     * @var Label
+     * @var Candidate
      * 
-     * @ManyToOne(targetEntity="Label", inversedBy="skills")
+     * @ManyToOne(targetEntity="Candidate", inversedBy="skills")
      */
     protected $candidate;
 

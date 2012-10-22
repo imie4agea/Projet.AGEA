@@ -1,0 +1,451 @@
+/*
+    // ========================================== \\
+   ||                                              ||
+   ||                  GRADIENTS                   ||
+   ||                                              ||
+    \\ ========================================== //
+*/
+/*
+ * Fonction de dégradé linéaire.
+ * @param color : Couleur principale du dégradé (couleur centrale)
+ * @param strength : force du dégradé (en pourcentage)
+ */
+/*
+ * Fonction de dégradé linéaire alternative.
+ * @param from : couleur du haut du dégradé
+ * @param to : couleur du bas de dégradé
+ */
+/*
+ * Fonction de dégradé radial.
+ * @param from : couleur centrale du dégradé
+ * @param to : couleur externe du dégradé
+ * @param size : taille du dégradé
+ * @param top : centre du dégradé (top)
+ * @param left : centre du dégradé (left)
+ */
+/*
+    // ========================================== \\
+   ||                                              ||
+   ||                   SHADOWS                    ||
+   ||                                              ||
+    \\ ========================================== //
+*/
+/*
+ * Fonction d'ombre portée simple.
+ * @param left : position left
+ * @param top : position top
+ * @param size : taille du dégradé
+ * @param color : couleur du dégradé
+ * @param magnification : grossissement du dégradé
+ */
+/*
+ * Fonction d'ombre portée sur le bas ed la div (comme un bas de feuille relevée)
+ * @param color : Couleur du dégradé (noir à 80% d'opacité par défaut)
+ */
+/*
+    // ========================================== \\
+   ||                                              ||
+   ||                   BUTTONS                    ||
+   ||                                              ||
+    \\ ========================================== //
+*/
+/*
+ * Fonction créant un effet glossy pour les boutons de l'interface
+ * @param color : Couleur de base du bouton
+ * @param radius : radius des coins arrondis
+ */
+/*
+    // ========================================== \\
+   ||                                              ||
+   ||                    BOXES                     ||
+   ||                                              ||
+    \\ ========================================== //
+*/
+/*
+    // ========================================== \\
+   ||                                              ||
+   ||                BORDER-RADIUS                 ||
+   ||                                              ||
+    \\ ========================================== //
+*/
+/* ==============================================================================
+  GENERIC
+  ============================================================================== */
+body {
+  font-family: 'Droid Sans';
+  background: url(../img/bg2.jpg);
+  font-size: 12px;
+  color: #666;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Droid Sans" !important;
+  font-weight: normal !important;
+  color: #666;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-size: 36px;
+  line-height: 40px;
+}
+h2 {
+  font-size: 20px;
+  line-height: 40px;
+}
+h3 {
+  font-size: 18px;
+  line-height: 32px;
+}
+h4 {
+  font-size: 13px;
+  line-height: 30px;
+}
+h5 {
+  font-size: 12px;
+  line-height: 26px;
+}
+h6 {
+  font-size: 11px;
+  line-height: 24px;
+}
+hr {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px solid #e0dfdf;
+  border-bottom: 1px solid #fcfcfc;
+}
+a {
+  color: #F31333;
+}
+p {
+  font-size: 120%;
+}
+/* ==============================================================================
+  WRAPPER
+  ============================================================================== */
+#wrapper {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background: url(../img/bg-wrapper.jpg);
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.35);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.35);
+}
+#wrapper h1 {
+  color: #f31333;
+}
+#wrapper h2 {
+  color: #f31333;
+}
+.btn:hover {
+  -webkit-box-shadow: 0px 0px 10px 0px #000000;
+  -moz-box-shadow: 0px 0px 10px 0px #000000;
+  -o-box-shadow: 0px 0px 10px 0px #000000;
+  box-shadow: 0px 0px 10px 0px #000000;
+}
+/* ==============================================================================
+  MODAL
+  ============================================================================== */
+.modal .modal-header {
+  background-color: #DDDDDD;
+  -webkit-border-radius: 6px 6px 0 0;
+  -moz-border-radius: 6px 6px 0 0;
+  -o-border-radius: 6px 6px 0 0;
+  border-radius: 6px 6px 0 0;
+}
+.modal .modal-header .close {
+  margin-top: 0px;
+  padding-bottom: 2px;
+  border: none;
+}
+.modal .modal-body label {
+  cursor: pointer;
+}
+.modal .modal-footer {
+  background-color: #DDDDDD;
+}
+#modal-debug .modal-body {
+  height: 400px;
+}
+#modal-debug table {
+  width: auto;
+}
+#modal-debug table thead {
+  min-width: 0;
+  width: auto;
+}
+#modal-debug table thead th {
+  min-width: 0;
+  width: auto;
+}
+#modal-debug table tbody {
+  min-width: 0;
+  width: auto;
+}
+#modal-debug table tbody td {
+  min-width: 0;
+  width: auto;
+}
+#post_cv h2 {
+  color: #f31333;
+  padding-top: 5px;
+}
+.large_modal {
+  width: 1000px;
+  height: 800px;
+  margin-left: -500px;
+  margin-top: -400px;
+}
+.large_modal .modal-body {
+  max-height: 670px;
+}
+/* ==============================================================================
+  HEADER
+  ============================================================================== */
+.agea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  margin: 15px;
+}
+header {
+  margin-top: 50px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.9);
+  position: relative;
+  z-index: 20;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.35), 0px -1px 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.35), 0px -1px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.35), 0px -1px 1px rgba(0, 0, 0, 0.15);
+}
+.navbar, .navbar-inner, .nav {
+  float: right;
+  background: none !important;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  padding: 0px;
+  margin: 0;
+}
+.navbar-inner {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.dropdown-menu li a:hover, .dropdown-menu li a:focus {
+  color: #ffffff;
+  background: #F31333 !important;
+}
+.dropdown-menu .active a {
+  color: #ffffff !important;
+  background: #F31333 !important;
+}
+.dropdown-menu .active a:hover {
+  color: #ffffff !important;
+  background: #F31333 !important;
+}
+.navbar .btn-navbar {
+  position: absolute;
+  right: 50px;
+  top: 15px;
+}
+.navbar .nav li a {
+  color: #666;
+  border-top: 4px solid transparent;
+  text-shadow: none;
+  font-size: 16px;
+  padding: 28px 20px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.navbar .nav li a:focus, .navbar .nav li a:hover {
+  border-top: 4px solid #F31333 !important;
+  background: #F31333 !important;
+  color: #fff;
+}
+.navbar .nav .active a, .navbar .nav .active a:focus {
+  color: #F31333 !important;
+  text-decoration: none;
+  border-top: 4px solid #F31333 !important;
+  background-color: transparent !important;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.navbar .nav .active a:hover {
+  border-top: 4px solid #F31333 !important;
+  background: #F31333 !important;
+  color: #fff !important;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.navbar .nav .active a:hover .caret {
+  border-top-color: #fff !important;
+  border-bottom-color: #fff !important;
+}
+/* ==============================================================================
+  WIDGET
+  ============================================================================== */
+.widget-public {
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+.widget-public .wide-button {
+  margin: 4px;
+}
+.widget-public h1 {
+  color: white !important;
+  font-size: 30px;
+}
+.widget-public .squared-image {
+  height: 100px;
+  width: 100px;
+}
+/* ==============================================================================
+  FOOTER
+  ============================================================================== */
+#footer {
+  margin-top: 20px;
+  background: url(../img/fbg5.jpg);
+  color: #fcfcfc !important;
+  padding: 40px 0px;
+  z-index: 1;
+  position: relative;
+  opacity: 1;
+  -webkit-box-shadow: 0 -4px 0 rgba(0, 0, 0, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0 -4px 0 rgba(0, 0, 0, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 -4px 0 rgba(0, 0, 0, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.35);
+}
+#footer p, #footer a {
+  color: #fcfcfc !important;
+}
+#footer a:hover {
+  color: #fff;
+}
+#footer h3 {
+  padding: 2px 0px !important;
+  margin-bottom: 10px;
+  color: #fdfdfd;
+}
+/* ==============================================================================
+  FOOTER MENU
+  ============================================================================== */
+#footer-menu {
+  height: 50px;
+  background: url(../img/fbg.jpg);
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.35);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.35);
+}
+#footer-menu #footer-menu-logo {
+  height: 46px;
+}
+#footer-menu #footer-menu-logo a {
+  color: #5a5a5a;
+  text-decoration: none;
+  font-size: 22px;
+  line-height: 54px;
+  margin-left: 5px;
+}
+#footer-menu #footer-menu-logo a:hover {
+  color: gray;
+}
+#footer-menu #footer-menu-logo img {
+  margin-top: 10px;
+}
+#footer-menu #footer-menu-links {
+  display: block;
+  float: left;
+  max-height: 52px;
+  margin: 6px 0 6px 0;
+}
+#footer-menu #footer-menu-links ul, #footer-menu #footer-menu-links li {
+  list-style: disc;
+  color: #444;
+  padding: 0;
+  margin: 0;
+}
+#footer-menu #footer-menu-links li:first-child {
+  list-style: none;
+}
+#footer-menu #footer-menu-links ul li {
+  float: left;
+  position: relative;
+  z-index: 100;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+#footer-menu #footer-menu-links ul li a {
+  display: inline-block;
+  color: #444;
+  text-decoration: none;
+  font-size: 12px;
+  font-family: 'Droid Sans';
+  text-transform: lowercase;
+  padding: 10px 15px 10px 0px;
+  margin: 0px 10px 0px 0px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+#footer-menu #footer-menu-links ul li a:hover {
+  color: #fff;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+#footer-menu #footer-menu-back-to-top {
+  margin: 10px;
+  z-index: 999;
+}
+#footer-menu #footer-menu-back-to-top a {
+  width: 30px;
+  height: 30px;
+  display: block;
+  background-color: #f31333;
+  background-image: url(../img/scroll-top-top.png);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+#footer-menu #footer-menu-back-to-top a:hover {
+  background-color: #b10921;
+  -webkit-box-shadow: 0px 0px 10px 0px #000000;
+  -moz-box-shadow: 0px 0px 10px 0px #000000;
+  -o-box-shadow: 0px 0px 10px 0px #000000;
+  box-shadow: 0px 0px 10px 0px #000000;
+}
+/* ==============================================================================
+  FOOTER COPYRIGHT
+  ============================================================================== */
+#footer-copyright {
+  padding: 20px 0px;
+}
+#footer-copyright p {
+  margin: 0 auto;
+  width: 380px;
+  text-align: center;
+  color: #666;
+  text-shadow: 0px -1px 1px #222222;
+}

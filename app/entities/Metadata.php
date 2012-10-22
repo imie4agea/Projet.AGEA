@@ -34,6 +34,13 @@ class Metadata
      * @Column(type="text", nullable=false)
      */
     protected $value;
+
+    /**
+     * @var boolean
+     * 
+     * @Column(type="boolean", nullable=false)
+     */
+    protected $metadata;
     
     public function getId() 
     {
@@ -79,6 +86,18 @@ class Metadata
     public function setValue($value) 
     {
         $this->value = $value;
+    
+        return $this;
+    }
+
+    public function getMetadata() 
+    {
+        return $this->metadata;
+    }
+
+    public function setMetadata($metadata) 
+    {
+        $this->metadata = $metadata;
     
         return $this;
     }

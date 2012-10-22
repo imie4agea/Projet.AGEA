@@ -50,14 +50,17 @@ if (!($page instanceof Page)) {
 
 $pages = $em->getRepository('Page')->findAll();
 $map   = array();
+$icons = array();
 
 foreach ($pages as $_page){
     $map[$_page->getSection()->getName()][$_page->getName()] = $_page->getTitle();
+    $icons[$_page->getSection()->getName()][$_page->getName()] = $_page->getIcon();
 }
 
 View::getInstance()->assign('page_template', $page->getSection()->getName() . "/pages/" . $page->getName() . ".tpl");
 View::getInstance()->assign('section_template', $page->getSection()->getName() . "/" . $page->getSection()->getName() . ".tpl");
 View::getInstance()->assign('map', $map);
+View::getInstance()->assign('icons', $icons);
 
 /* ==============================================================================
   CONTRÔLEURS

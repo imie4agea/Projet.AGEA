@@ -4,7 +4,7 @@
         <button class="close" data-dismiss="modal">x</button>
     </div>
     <div class="modal-body">
-        <form id="login-form" action="index.php?p={$page}" method="post" class="form-horizontal">
+        <form id="login-form" action="index.php?p=contenus" method="post" class="form-horizontal">
             <div class="control-group">
                 <label class="control-label" for="login_username">Nom d'utilisateur :</label>
                 <div class="controls">
