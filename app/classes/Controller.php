@@ -36,6 +36,9 @@ class Controller
         View::getInstance()->display(TEMPLATES_DIR . 'index.tpl');
     }
 
+    /**
+     * Initialise le CSS
+     */
     private function _initCss(){
         // CSS de la section
         if (file_exists(CSS . $this->page->getSection()->getName() . '.css')){
@@ -48,6 +51,9 @@ class Controller
         }
     }
 
+    /**
+     * Initialise le JS
+     */
     private function _initJs(){
         // JS de la section
         if (file_exists(JS . $this->page->getSection()->getName() . '.js')) {

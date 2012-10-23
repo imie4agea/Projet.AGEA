@@ -29,6 +29,13 @@ class Content extends ArrayEntity
     protected $body;
 
     /**
+     * @var string
+     * 
+     * @Column(type="text")
+     */
+    protected $canonical;
+
+    /**
      * @var String
      * 
      * @Column(type="string",length=100, nullable=false)
@@ -81,6 +88,18 @@ class Content extends ArrayEntity
     public function setBody($body) 
     {
         $this->body = $body;
+    
+        return $this;
+    }
+
+    public function getCanonical() 
+    {
+        return $this->canonical;
+    }
+
+    public function setCanonical($canonical) 
+    {
+        $this->canonical = $canonical;
     
         return $this;
     }

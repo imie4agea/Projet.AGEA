@@ -50,6 +50,13 @@ class ContentType extends ArrayEntity
      * 
      * @Column(type="boolean", nullable=false)
      */
+    protected $backup;
+
+    /**
+     * @var boolean
+     * 
+     * @Column(type="boolean", nullable=false)
+     */
     protected $html;
 
     /**
@@ -117,6 +124,18 @@ class ContentType extends ArrayEntity
     public function setPicture($picture) 
     {
         $this->picture = $picture;
+    
+        return $this;
+    }
+
+    public function getBackup() 
+    {
+        return $this->backup;
+    }
+
+    public function setBackup($backup) 
+    {
+        $this->backup = $backup;
     
         return $this;
     }
