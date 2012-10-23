@@ -3,8 +3,8 @@
         <i class="icon-signin"></i> Connexion
         <button class="close" data-dismiss="modal">x</button>
     </div>
+    <form id="login-form" action="index.php?p=contenus" method="post" class="form-horizontal" onsubmit="return false;">
     <div class="modal-body">
-        <form id="login-form" action="index.php?p=contenus" method="post" class="form-horizontal">
             <div class="control-group">
                 <label class="control-label" for="login_username">Nom d'utilisateur :</label>
                 <div class="controls">
@@ -27,9 +27,16 @@
                 <button class="close" data-dismiss="alert">×</button>
                 <strong>Attention :</strong> ne cochez pas cette case si vous vous connectez depuis un lieu public !
             </div>
-        </form>
     </div>
     <div class="modal-footer">
+        <div id="empty_field_warning" class="error" style="display:none">
+            Veuillez remplir tous les champs.
+        </div>
+        <div id="wrong_login_warning" class="error" style="display:none">
+            L'identifiant ou le mot de passe ne sont pas correcte.
+        </div>
+        <img id="login_loading" src="./img/ajax-loader.gif" alt="Chargement" class="hide"/>&nbsp;
         <input id="login-submit" class="btn btn-primary" type="submit" value="Connexion">
     </div>
+    </form>
 </div>

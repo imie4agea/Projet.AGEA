@@ -45,9 +45,9 @@ $(document).ready(function(){
 
 $('#login_remember').on('click', function(e){
     if ($('#login_remember').attr('checked') == 'checked'){
-      $('#login_remember_warning').show();
+        $('#login_remember_warning').show();
     } else {
-      $('#login_remember_warning').hide();
+        $('#login_remember_warning').hide();
     }
 });
 
@@ -71,10 +71,11 @@ $('.modal').css({
 })
 
 // Envoi des formulaires
-
+/*
 $('#login-submit').on('click', function(e){
     $('#login-form').submit();
 });
+ */
 
 $('#cv-submit').on('click', function(e){
     $('#cv-form').submit();
