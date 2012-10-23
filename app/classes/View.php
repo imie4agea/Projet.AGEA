@@ -50,6 +50,6 @@ class View extends Smarty
      */
     public function getVariables()
     {
-        return $this->_tpl_vars;
+        return $this->getTemplateVars();
     }
 }

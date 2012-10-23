@@ -31,7 +31,7 @@ class Content extends ArrayEntity
     /**
      * @var string
      * 
-     * @Column(type="text")
+     * @Column(type="text", nullable=true)
      */
     protected $canonical;
 

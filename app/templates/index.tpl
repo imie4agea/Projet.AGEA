@@ -10,7 +10,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="apple-mobile-web-app-capable" content="yes">
 
-        <title>{ $title }</title>
+        <title>{$title}</title>
 
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/bootstrap-responsive.css">
@@ -58,7 +58,7 @@
         <![endif]-->
 
         {if $env_mode == 'dev'}
-            {include file=dev/modal/modal_debug.tpl}
+            {include file="dev/modal/modal_debug.tpl"}
         {/if}
 
         {include file=$section_template}

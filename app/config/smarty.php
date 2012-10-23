@@ -1,6 +1,6 @@
 <?php
 
-require_once LIB_DIR . 'smarty/Smarty.php';
+require_once LIB_DIR . 'smarty/libs/Smarty.class.php';
 
 /* ==============================================================================
   VARIABLES GENERALES

@@ -234,6 +234,7 @@ $actualite->setPage($actualites);
 $actualite->setPicture(true);
 $actualite->setHtml(false);
 $actualite->setFeed(true);
+$actualite->setBackup(false);
 $em->persist($actualite);
 
 $action = new ContentType();
@@ -242,6 +243,7 @@ $action->setPage($actions);
 $action->setPicture(false);
 $action->setHtml(true);
 $action->setFeed(true);
+$action->setBackup(false);
 $em->persist($action);
 
 $em->flush();

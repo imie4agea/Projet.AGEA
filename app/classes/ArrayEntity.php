@@ -36,12 +36,12 @@ class ArrayEntity
 
         foreach ($objects as $object){
             if ($identifier_as_key){
-                $object_array[$object->getId()] = $object->toArray(false);
+                $objects_array[$object->getId()] = $object->toArray(false);
             } else {
-                $object_array[] = $object->toArray();
+                $objects_array[] = $object->toArray();
             }
         }
 
-        return $object_array;
+        return $objects_array;
     }
 }

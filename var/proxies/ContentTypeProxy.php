@@ -84,6 +84,18 @@ class ContentTypeProxy extends \ContentType implements \Doctrine\ORM\Proxy\Proxy
         return parent::setPicture($picture);
     }
 
+    public function getBackup()
+    {
+        $this->__load();
+        return parent::getBackup();
+    }
+
+    public function setBackup($backup)
+    {
+        $this->__load();
+        return parent::setBackup($backup);
+    }
+
     public function getHtml()
     {
         $this->__load();
@@ -141,7 +153,7 @@ class ContentTypeProxy extends \ContentType implements \Doctrine\ORM\Proxy\Proxy
 
     public function __sleep()
     {
-        return array('__isInitialized__', 'id', 'contents', 'label', 'picture', 'html', 'feed', 'page', 'render');
+        return array('__isInitialized__', 'id', 'contents', 'label', 'picture', 'backup', 'html', 'feed', 'page', 'render');
     }
 
     public function __clone()

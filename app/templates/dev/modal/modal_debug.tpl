@@ -209,19 +209,6 @@
                     </tbody>
                 </table>
             </div>
-            
-            <div id="debug-krumo" class="tab-pane fade">
-                {php}
-                    global $debugArray;
-                    krumo($debugArray);
-                {/php}
-            </div>
-            
-            <div id="debug-smarty" class="tab-pane fade">
-                {php}
-                    krumo(View::getInstance()->getVariables());
-                {/php}
-            </div>
         </div>
     </div>
 </div>

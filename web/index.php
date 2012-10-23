@@ -89,5 +89,4 @@ if (ENV_MODE == 'dev'){
         JS . 'shortcut.js')
     );
 }
-
 $controller->view();

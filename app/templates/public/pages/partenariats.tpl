@@ -15,6 +15,6 @@
         <i>N’hésitez pas à nous contacter pour de plus amples informations.</i>
     </div>
     <div class="span3" style="text-align: right;">
-        {include file=public/sidebar.tpl}
+        {include file="public/sidebar.tpl"}
     </div>
 </div>
