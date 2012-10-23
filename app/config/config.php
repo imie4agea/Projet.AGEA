@@ -34,7 +34,7 @@ define('IMG',  './css/');
 
 require_once LIB_DIR . 'autoloadmanager/AutoloadManager.php';
 
-define('AUTOLOAD_SAVE_PATH', sys_get_temp_dir());
+define('AUTOLOAD_SAVE_PATH', VAR_DIR . 'autoload/');
 
 spl_autoload_register('AutoloadManager::loadClass');
 

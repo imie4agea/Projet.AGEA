@@ -3,7 +3,7 @@
 /**
  * @Entity
  */
-class Content
+class Content extends ArrayEntity
 {
     /**
      * @var int
@@ -27,6 +27,13 @@ class Content
      * @Column(type="text", nullable=false)
      */
     protected $body;
+
+    /**
+     * @var string
+     * 
+     * @Column(type="text", nullable=true)
+     */
+    protected $canonical;
 
     /**
      * @var String
@@ -81,6 +88,18 @@ class Content
     public function setBody($body) 
     {
         $this->body = $body;
+    
+        return $this;
+    }
+
+    public function getCanonical() 
+    {
+        return $this->canonical;
+    }
+
+    public function setCanonical($canonical) 
+    {
+        $this->canonical = $canonical;
     
         return $this;
     }

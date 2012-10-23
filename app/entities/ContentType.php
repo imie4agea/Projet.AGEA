@@ -5,7 +5,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 /**
  * @Entity
  */
-class ContentType
+class ContentType extends ArrayEntity
 {
     /**
      * Constructeur
@@ -44,6 +44,13 @@ class ContentType
      * @Column(type="boolean", nullable=false)
      */
     protected $picture;
+
+    /**
+     * @var boolean
+     * 
+     * @Column(type="boolean", nullable=false)
+     */
+    protected $backup;
 
     /**
      * @var boolean
@@ -117,6 +124,18 @@ class ContentType
     public function setPicture($picture) 
     {
         $this->picture = $picture;
+    
+        return $this;
+    }
+
+    public function getBackup() 
+    {
+        return $this->backup;
+    }
+
+    public function setBackup($backup) 
+    {
+        $this->backup = $backup;
     
         return $this;
     }

@@ -1,6 +1,6 @@
 <div class="modal hide fade" id="login">
     <div class="modal-header">
-        <i class="icon-signin"></i> Connexion
+        <i class="icon-signin"></i> Connexion à l'espace membre
         <button class="close" data-dismiss="modal">x</button>
     </div>
     <form id="login-form" action="index.php?p=contenus" method="post" class="form-horizontal" onsubmit="return false;">

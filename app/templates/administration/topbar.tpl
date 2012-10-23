@@ -1,7 +1,7 @@
 <div class="navbar navbar-fixed-top">
 	<div class="navbar-inner">
 		<div class="container">
-			<a class="brand" href="index.html">
+			<a class="brand" href="index.php?p=general">
 				{$site_name|upper} - Administration			
 			</a>		
 			<ul class="nav pull-right">

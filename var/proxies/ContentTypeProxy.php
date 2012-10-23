@@ -84,6 +84,18 @@ class ContentTypeProxy extends \ContentType implements \Doctrine\ORM\Proxy\Proxy
         return parent::setPicture($picture);
     }
 
+    public function getBackup()
+    {
+        $this->__load();
+        return parent::getBackup();
+    }
+
+    public function setBackup($backup)
+    {
+        $this->__load();
+        return parent::setBackup($backup);
+    }
+
     public function getHtml()
     {
         $this->__load();

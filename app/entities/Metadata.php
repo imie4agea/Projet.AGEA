@@ -3,7 +3,7 @@
 /**
  * @Entity
  */
-class Metadata
+class Metadata extends ArrayEntity
 {
     /**
      * @var int

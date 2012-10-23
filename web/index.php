@@ -16,9 +16,11 @@ include_once ROOT_DIR . 'app/config/config.php';
   PARAMÉTRAGE
   ============================================================================== */
 
-foreach ($em->getRepository('Metadata')->findAll() as $metadata){
-    define(strtoupper($metadata->getName()), $metadata->getValue());
-    View::getInstance()->assign($metadata->getName(), $metadata->getValue());
+$metadata = getEntityManager()->getRepository('Metadata')->findAll();
+
+foreach ($metadata as $data){
+    define(strtoupper($data->getName()), $data->getValue());
+    View::getInstance()->assign($data->getName(), $data->getValue());
 }
 
 /* ==============================================================================
@@ -48,43 +50,18 @@ if (!($page instanceof Page)) {
     $page = $em->getRepository('Page')->findOneBy(array('name' => 'accueil'));
 }
 
-$pages = $em->getRepository('Page')->findAll();
-$map   = array();
-$icons = array();
-
-foreach ($pages as $_page){
-    $map[$_page->getSection()->getName()][$_page->getName()] = $_page->getTitle();
-    $icons[$_page->getSection()->getName()][$_page->getName()] = $_page->getIcon();
-}
+$pages = ArrayEntity::toArrayAll('Page');
 
 View::getInstance()->assign('page_template', $page->getSection()->getName() . "/pages/" . $page->getName() . ".tpl");
 View::getInstance()->assign('section_template', $page->getSection()->getName() . "/" . $page->getSection()->getName() . ".tpl");
-View::getInstance()->assign('map', $map);
-View::getInstance()->assign('icons', $icons);
+View::getInstance()->assign('pages', $pages);
 
 /* ==============================================================================
-  CONTRÔLEURS
+  CONTRÔLEUR
   ============================================================================== */
 
 $controller = new Controller();
 $controller->setPage($page);
-
-/* ==============================================================================
-  RESSOURCES
-  ============================================================================== */
-
-// Scripts de developpement
-if (ENV_MODE == 'dev'){
-    $controller->setJs(array(
-        JS . 'shortcut.js')
-    );
-}
-
-// JS de la page
-if (file_exists(JS . $controller->getPage()->getName() . '.js')) $controller->setJs(array(JS . $controller->getPage()->getName() . '.js'));
-
-// CSS de la page
-if (file_exists(CSS . $controller->getPage()->getName() . '.css')) $controller->setCss(array(CSS . $controller->getPage()->getName() . '.css' => 'all'));
 
 /* ==============================================================================
   SESSION
@@ -106,4 +83,10 @@ if (file_exists(CONTROLLERS_DIR . $page->getName() . '.php')) include_once CONTR
   AFFICHAGE
   ============================================================================== */
 
+// Scripts de developpement
+if (ENV_MODE == 'dev'){
+    $controller->setJs(array(
+        JS . 'shortcut.js')
+    );
+}
 $controller->view();

@@ -11,10 +11,10 @@
 			<div id="footer-menu-links">
 				<ul id="footer-nav">
 					<li>
-						<a href="index.php?p=mentions_legales">mentions légales</a>
+						<a href="index.php?p=_mentions_legales">mentions légales</a>
 					</li>
 					<li>
-						<a href="#login" role="button" data-toggle="modal">administration</a>
+						<a href="#login-admin" role="button" data-toggle="modal">administration</a>
 					</li>
 					<li>
 						<a href="mailto:{$email}">contact</a>

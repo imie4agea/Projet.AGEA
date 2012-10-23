@@ -24,14 +24,46 @@ class Controller
      */
     public function view()
     {
+        $this->_initJs();
+        $this->_initCss();
+
         View::getInstance()->assign('js',      $this->getJs());
         View::getInstance()->assign('ieJs',    $this->getIeJs());
         View::getInstance()->assign('css',     $this->getCss());
         View::getInstance()->assign('ieCss',   $this->getIeCss());
-        View::getInstance()->assign('page',    $this->page->getName());
-        View::getInstance()->assign('section', $this->page->getSection()->getName());
+        View::getInstance()->assign('page',    $this->page->toArray());
         
         View::getInstance()->display(TEMPLATES_DIR . 'index.tpl');
+    }
+
+    /**
+     * Initialise le CSS
+     */
+    private function _initCss(){
+        // CSS de la section
+        if (file_exists(CSS . $this->page->getSection()->getName() . '.css')){
+            $this->setCss(array(CSS . $this->page->getSection()->getName() . '.css' => 'all'));
+        }
+
+        // CSS de la page
+        if (file_exists(CSS . $this->page->getName() . '.css')){
+            $this->setCss(array(CSS . $this->page->getName() . '.css' => 'all'));
+        }
+    }
+
+    /**
+     * Initialise le JS
+     */
+    private function _initJs(){
+        // JS de la section
+        if (file_exists(JS . $this->page->getSection()->getName() . '.js')) {
+            $this->setJs(array(JS . $this->page->getSection()->getName() . '.js'));
+        }
+
+        // JS de la page
+        if (file_exists(JS . $this->page->getName() . '.js')){
+            $this->setJs(array(JS . $this->page->getName() . '.js'));
+        }
     }
     
     /**

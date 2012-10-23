@@ -5,7 +5,7 @@ use Doctrine\Common\Collections\ArrayCollection;
 /**
  * @Entity
  */
-class Page
+class Page extends ArrayEntity
 {
     /**
      * Constructeur
@@ -27,7 +27,7 @@ class Page
     /**
      * @var string
      * 
-     * @Column(type="string", length=50, nullable=false)
+     * @Column(type="string", length=50, nullable=false, unique=true)
      */
     protected $name;
 

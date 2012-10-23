@@ -5,22 +5,22 @@
 
 <div class="widget-content">
 	<table class="table">
-		{foreach from=$list_contents key=id item=content}
+		{foreach from=$contents key=id item=content}
 			<tr>
 				<td>
 					<strong>{$content.title}</strong>
 				</td>
 				<td>
-					{$content.type}
+					{$content.content_type}
 				</td>
 				<td>
-					<a href="index.php?p=contenus&amp;content_id={$id}">
+					<a href="index.php?p=contenus&amp;edit_content={$id}">
     					<i class="icon-pencil"></i>
     					Modifier
 					</a>
 				</td>
 				<td>
-					<a href="index.php?p=contenus&amp;delete_id={$id}">
+					<a href="index.php?p=contenus&amp;delete_content={$id}">
     					<i class="icon-trash"></i>
     					Supprimer
 					</a>
@@ -28,17 +28,17 @@
 			</tr>
 		{/foreach}
 		<tr>
-			<form method="post" action="index.php?p=contenus&amp;new_content=true">
+			<form method="post" action="index.php?p=contenus&amp;add_content=true">
 				<td colspan="3">
 					<select name="content_type_id" id="content_type_id">
-						{foreach from=$list_content_types key=id item=label}
-							<option value="{$id}">{$label|capitalize}</option>
+						{foreach from=$content_types key=id item=content_type}
+							<option value="{$id}">{$content_type.label|capitalize}</option>
 						{/foreach}
 					</select>
 				</td>
 				<td>
 					<button type="submit" class="btn btn-danger">
-    					<i class="icon-trash"></i>
+    					<i class="icon-plus-sign"></i>
     					Ajouter
 					</button>
 				</td>
