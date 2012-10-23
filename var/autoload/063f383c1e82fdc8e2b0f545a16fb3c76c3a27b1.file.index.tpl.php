@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.12, created on 2012-10-23 14:26:49
+<?php /* Smarty version Smarty-3.1.12, created on 2012-10-23 17:53:49
          compiled from "/home/soufian/www/agea/app/templates/index.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:194231260550868b19e57063-11415405%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '063f383c1e82fdc8e2b0f545a16fb3c76c3a27b1' => 
     array (
       0 => '/home/soufian/www/agea/app/templates/index.tpl',
-      1 => 1350995207,
+      1 => 1351007626,
       2 => 'file',
     ),
   ),
@@ -50,7 +50,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/bootstrap-responsive.css">
         <link rel="stylesheet" href="css/font-awesome.css">
-        <link rel="stylesheet" href="css/main.css">
         <!--[if IE 7]><link rel="stylesheet" href="css/font-awesome-ie7.css"><![endif]-->
 
         <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700">

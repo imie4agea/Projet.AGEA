@@ -1,3 +1,5 @@
 nbproject
+var/proxies/*
+var/autoload/*
 *.tmp
 *~
